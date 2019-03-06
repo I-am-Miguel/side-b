@@ -1,0 +1,15 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+zuul:
+  ignored-services: '*'
+  routes:
+    sugestion:
+      path: /sugestion/**
+      serviceId: sugestion-service
+      strip-prefix: true
+  ribbon-isolation-strategy: thread
+  ribbon:
+    eager-load:
+      enabled: false

@@ -1,0 +1,8 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: sugestion-service
+  cloud:
+    config:
+      uri: http://localhost:8888
